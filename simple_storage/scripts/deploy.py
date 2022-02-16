@@ -1,7 +1,7 @@
 from brownie import accounts, config, SimpleStorage, network
 
 def get_account():
-    if network.show_active() == 'development':
+    if config['networks'][network.show_active()]['local'] is True:
         return accounts[0]
     else:
         return accounts.add(config['wallets']['dev_account_1']['private_key'])
