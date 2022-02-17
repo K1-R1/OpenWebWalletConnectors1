@@ -1,0 +1,6 @@
+networks:
+  default: ganache-local-persistant
+
+  ganache-local-persistant:
+    verify: False
+    local: True
